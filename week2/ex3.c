@@ -16,8 +16,8 @@ int main(int argc,char *argv[]){
             printf("\n");
         }
     }
-	else{
-	 	printf("Error, expected numberOfArguments=1");
-	}
+    else{
+        printf("Error, expected numberOfArguments=1");
+    }
  	return 0;
 }
