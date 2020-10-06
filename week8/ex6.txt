@@ -1,0 +1,10 @@
+Virtual address size=16 bits
+Page size=8 Kb
+
+Number of entries in page table - ?
+
+Number of offsets in page=Page size (bits)=2^13
+Number of different values in virtual address size=2^{Virtual address size}=2^16
+Number of pages=Number of different values in virtual address size/Number of offsets in page=8
+
+Answer: 8

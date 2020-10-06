@@ -1,0 +1,2 @@
+Physical address - is an offset of place in memory, where data is stored.
+Virtual address - is an offset of place in virtual page, which has either the physical address of of value in memory, or information, that it is not in memory right now.
