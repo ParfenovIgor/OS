@@ -2,12 +2,12 @@
 #define MAXSIZE 10000
                                                                                                                  
 //With given input file and  10 page frames the number of hits is 10 (1.0%) and number of misses is 990 (99.0%).
-//With given input file and  50 page frames the number of hits is 52 (5.2%) and number of misses is 948 (94.8%).
-//With given input file and 100 page frames the number of hits is 98 (9.8%) and number of misses is 902 (90.2%).
+//With given input file and  50 page frames the number of hits is 51 (5.1%) and number of misses is 949 (94.9%).
+//With given input file and 100 page frames the number of hits is 95 (9.5%) and number of misses is 905 (90.5%).
 
 struct page{
  	int address;
- 	int counter;
+ 	unsigned int counter;
 };
 
 struct page pages[MAXSIZE];
@@ -15,7 +15,7 @@ struct page pages[MAXSIZE];
 int main(){
     FILE *fin;
     fin=fopen("input.txt","r");
-    int SIZE=100;//Number of page frames
+    int SIZE=10;//Number of page frames
     int i;
     for(i=0;i<SIZE;i++){
      	pages[i].address=-1;//All frames are empty
@@ -62,7 +62,7 @@ int main(){
      	for(i=0;i<SIZE;i++){//Update counters
      	 	pages[i].counter>>=1;
      	}
-     	pages[id].counter|=(1<<30);
+     	pages[id].counter|=(1u<<31);
     }
     printf("Number of hits: %d\nNumber of misses: %d\n",hits,misses);
     fclose(fin);

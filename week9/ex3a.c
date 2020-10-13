@@ -18,11 +18,11 @@
 //per-process page fault rate with that of the local policy approach.
                                                          
 //This is implementaion of local page replacement.               
-//With given input file and 100 page frames the number of hits is 91327 (91.3%) and number of misses is 8673 (8.7%).
+//With given input file and 100 page frames the number of hits is 91299 (91.3%) and number of misses is 8701 (8.7%).
 
 struct page{
  	int address;
- 	int counter;
+ 	unsigned int counter;
 };
                            
 struct page pages[2][MAXSIZE];
@@ -75,7 +75,7 @@ int main(){
      	for(i=0;i<SIZE;i++){//Update counters
      	 	pages[process-1][i].counter>>=1;
      	}
-     	pages[process-1][id].counter|=(1<<30);
+     	pages[process-1][id].counter|=(1u<<31);
     }
     printf("Number of hits: %d\nNumber of misses: %d\n",hits,misses);
     fclose(fin);

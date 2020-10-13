@@ -22,7 +22,7 @@
 
 struct page{
  	int address;
- 	int counter;
+ 	unsigned int counter;
 };
 
 struct page pages[MAXSIZE];
@@ -74,7 +74,7 @@ int main(){
      	for(i=0;i<SIZE;i++){//Update counters
      	 	pages[i].counter>>=1;
      	}
-     	pages[id].counter|=(1<<30);
+     	pages[id].counter|=(1u<<31);
     }
     printf("Number of hits: %d\nNumber of misses: %d\n",hits,misses);
     fclose(fin);
