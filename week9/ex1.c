@@ -1,6 +1,8 @@
 #include <stdio.h>
 #define MAXSIZE 10000
-
+                                                                                                                 
+//With given input file and  10 page frames the number of hits is 10 (1.0%) and number of misses is 990 (99.0%).
+//With given input file and  50 page frames the number of hits is 52 (5.2%) and number of misses is 948 (94.8%).
 //With given input file and 100 page frames the number of hits is 98 (9.8%) and number of misses is 902 (90.2%).
 
 struct page{
