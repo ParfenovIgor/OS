@@ -1,0 +1,7 @@
+igor@igor-VirtualBox:~/Desktop$ ls -i _ex1.txt
+170959 _ex1.txt
+igor@igor-VirtualBox:~/Desktop$ ls -i _ex1_1.txt
+170959 _ex1_1.txt
+igor@igor-VirtualBox:~/Desktop$ ls -i _ex1_2.txt
+170959 _ex1_2.txt
+

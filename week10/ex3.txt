@@ -1,0 +1,15 @@
+igor@igor-VirtualBox:~/Desktop$ chmod 666 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ ls -l _ex3.txt
+-rw-rw-rw- 1 igor igor 0 окт.  20 14:24 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ chmod 707 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ ls -l _ex3.txt
+-rwx---rwx 1 igor igor 0 окт.  20 14:24 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ chmod 660 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ ls -l _ex3.txt
+-rw-rw---- 1 igor igor 0 окт.  20 14:24 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ chmod 775 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ ls -l _ex3.txt
+-rwxrwxr-x 1 igor igor 0 окт.  20 14:24 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ chmod 777 _ex3.txt
+igor@igor-VirtualBox:~/Desktop$ ls -l _ex3.txt
+-rwxrwxrwx 1 igor igor 0 окт.  20 14:24 _ex3.txt
