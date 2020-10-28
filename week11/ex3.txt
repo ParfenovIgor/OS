@@ -1,3 +1,4 @@
+Both processes, after fork, has common stdout buffer.
 Program 1 output:
 _________________
 Hello
