@@ -1,0 +1,39 @@
+Default buffer size
+
+real	0m0.332s
+user	0m0.020s
+sys	0m0.176s
+
+Buffer size = 256 bytes
+
+real	0m0.942s
+user	0m0.096s
+sys	0m0.624s
+
+Buffer size = 64 bytes
+
+real	0m3.574s
+user	0m0.300s
+sys	0m2.536s
+
+Default buffer size with O_SYNC flag
+
+real	0m25.044s
+user	0m0.036s
+sys	0m1.348s
+
+Buffer size = 256 bytes with O_SYNC flag
+
+real	1m3.695s
+user	0m0.168s
+sys	0m4.912s
+
+Buffer size = 16 bytes with O_SYNC flag
+
+real	3m55.159s
+user	0m0.556s
+sys	0m18.856s
+
+The less buffer - the slower performance of copy, because program has to copy small piece of information many times.
+With O_SYNC the performance is approximately 65 times slower.
+
