@@ -1,0 +1,68 @@
+1. Use recovery rollback
+
+If two locked philosophers found, rollback them.
+                         
+________________________________________________________________________
+
+struct state{
+  	int left,right;
+};
+
+struct state history[nPhilosophers][nMemory];
+
+void* thread_philosopher(void *arg){
+ 	while(true){
+ 		push_state();
+		if(check_fork_free(my_left)){//Locked until left fork is free
+		 	bring_left_fork();   
+ 	 	}   	 
+ 	 	push_state();
+		if(check_fork_free(my_right)){//Locked until right fork is free
+		 	bring_right_fork();
+ 	 	}
+ 	 	push_state();	       
+ 	 	if(have_left_fork() && have_right_fork()){
+ 	 	 	sleep(rand());
+ 	 	 	leave_forks();
+ 	 	}
+ 	}
+}
+
+void* thread_controller(void *arg){
+ 	while(true){
+ 		int l,r;
+ 	 	if(find_two_locked_philosophers(&l,&r)){
+ 	 	 	free_common_fork();
+ 	 	 	pop_state(l);
+ 	 	 	pop_state(r);
+ 		}
+ 	}
+}
+
+________________________________________________________________________
+
+
+2. Avoidance
+
+Don't bring left fork, until right fork is free.
+
+________________________________________________________________________
+
+in fork_used[nForks];
+
+void* thread_philosopher(void *arg){
+ 	while(true){     
+		if(!fork_used[my_left] && check_fork_free(my_right){//Locked until right fork is free
+		 	bring_left_fork();   
+ 	 	}   	     
+		if(!fork_used[my_right]){
+		 	bring_right_fork();
+ 	 	}            	       
+ 	 	if(have_left_fork() && have_right_fork()){
+ 	 	 	sleep(rand());
+ 	 	 	leave_forks();
+ 	 	}
+ 	}
+}
+
+________________________________________________________________________

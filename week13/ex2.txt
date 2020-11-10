@@ -1,0 +1,28 @@
+1. Recovery
+When this technique is used,
+the system does not attempt to prevent deadlocks from occurring. Instead, it lets
+them occur, tries to detect when this happens, and then takes some action to
+recover after the fact. 
+a) Preemption
+b) Rollback
+c) Killing processes
+
+2. Avoidance
+The system must be
+able to decide whether granting a resource is safe or not and make the allocation
+only when it is safe.
+
+3. Prevention
+If we can ensure that at least
+one of conditions of deadlocks is never satisfied, then deadlocks will be structurally impossible
+a) Mutual-Exclusion Condition
+b) Hold-and-Wait Condition
+c) No-Preemption Condition
+d) Circular Wait Condition
+
+
+If we can exlude one of conditions of deadlock, it is better to use prevention.
+Otherwise, we can use avoidance, but it will cause much harder scheduling of resources usage
+for software developers, because system has to know, when which resource is needed.
+If we can't satisfy both of these, we can use recovery, but all three ways to recover are
+not stable and can damage information.
