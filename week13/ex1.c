@@ -55,7 +55,7 @@ int main(){
 	 		break;
 	 	}
 	 	used[good]=1;
-		for(j=0;j<nProcesses;j++){
+		for(j=0;j<nResources;j++){
 		 	A[j]+=C[good][j];
 		}                   
 	}
